@@ -1,0 +1,19 @@
+doctype html
+html
+  head
+    title Code Knights-Invalid Credentials
+    link(rel='stylesheet', type='text/css', href='css/bootstrap.min.css')
+    link(rel='stylesheet', type='text/css', href='css/bootstrap-theme.min.css')
+    link(rel='stylesheet', type='text/css', href='css/custom.css')
+    link(rel='stylesheet', type='text/css', href='css/style.css')
+    script(type='text/javascript', src='js/jquery-1.10.2.js')
+    script(type='text/javascript', src='js/jquery-ui.custom.min.js')
+    script(type='text/javascript', src='js/bootstrap.min.js')
+    script(type='text/javascript', src='js/style.js')
+  body
+    .container
+      .centered
+        .alert.alert-danger(role='alert')
+          | Invalid credentials. Try 
+          a(href='/login') LOGIN
+          |  again.

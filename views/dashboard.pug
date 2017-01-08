@@ -1,0 +1,67 @@
+html
+ head
+   title="CodeKnights-Dashboard"
+   link(rel='stylesheet', href='/css/custom.css')
+   link(rel='stylesheet', href='/css/bootstrap.min.css')
+   link(rel='stylesheet', href='/css/bootstrap-theme.min.css')
+   link(rel='stylesheet', href='/css/style.css')
+   script(src='/js/jquery-1.10.2.js')
+   script(src='/js/bootstrap.min.js')
+   script(src='/js/angular.min.js')
+   script(src='/js/jcustom.js')
+ body
+ nav.navbar.navbar-inverse
+  .container-fluid
+  .navbar-header
+    button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#bs-example-navbar-collapse-1', aria-expanded='false')
+      span.sr-only Toggle navigation
+      span.icon-bar
+      span.icon-bar
+      span.icon-bar
+    |  
+    a.navbar-brand
+     | Welcome 
+     =username
+  #bs-example-navbar-collapse-1.collapse.navbar-collapse
+    ul.nav.navbar-nav
+      li.active
+        a(href='/dashboard')
+          | Problems 
+          span.sr-only (current)
+      li
+        a(href='/ranklist') Ranklist
+      
+    ul.nav.navbar-nav.navbar-right
+      form(method='POST' action='/logout')
+           button(type='submit' class='btn btn-default' id='logoutBtn') Logout
+.panel.panel-default
+  h1(align='center')
+   .panel-heading Contest 1
+  table.table.table-hover
+    thead
+      tr
+        th Problem Name
+        th Problem Code
+        th Submit
+    tbody
+      tr
+        td 
+          a(href='dashboard/code1') Add the numbers
+        td code1
+        td 
+          a(href='dashboard/code1/submit')
+            button(class='btn btn-info' id='submit1') Submit
+      tr
+        td
+          a(href='dashboard/code2') Substact the numbers
+        td code2
+        td 
+          a(href='dashboard/code2/submit')
+            button(class='btn btn-info' id='submit2') Submit
+      tr
+        td 
+          a(href='dashboard/code3') Multiply the numbers
+        td code3
+        td
+          a(href='dashboard/code3/submit') 
+            button(class='btn btn-info' id='submit1') Submit

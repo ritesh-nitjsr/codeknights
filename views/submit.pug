@@ -1,0 +1,53 @@
+html
+ head
+   title="CodeKnights-Submit"
+   link(rel='stylesheet', href='/css/custom.css')
+   link(rel='stylesheet', href='/css/bootstrap.min.css')
+   link(rel='stylesheet', href='/css/bootstrap-theme.min.css')
+   link(rel='stylesheet', href='/css/style.css')
+   script(src='/js/jquery-1.10.2.js')
+   script(src='/js/bootstrap.min.js')
+   script(src='/js/angular.min.js')
+   script(src='/js/custom.js')
+ body
+ nav.navbar.navbar-inverse
+  .container-fluid
+  .navbar-header
+    button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#bs-example-navbar-collapse-1', aria-expanded='false')
+      span.sr-only Toggle navigation
+      span.icon-bar
+      span.icon-bar
+      span.icon-bar
+    |  
+    .navbar-brand
+     | Welcome 
+     =username
+  #bs-example-navbar-collapse-1.collapse.navbar-collapse
+    ul.nav.navbar-nav
+      li
+        a(href='/dashboard')
+          | Problems 
+          span.sr-only (current)
+      li
+        a(href='/ranklist') Ranklist
+      
+    ul.nav.navbar-nav.navbar-right
+      form(method='POST' action='/logout')
+           button(type='submit' class='btn btn-default' id='logoutBtn') Logout
+ form(action='/dashboard/'+problem_code+'/result' , method='POST')
+   .container
+    .panel.panel-default
+      .panel-heading
+        .panel-title
+        h2
+         !=problem_name 
+         |(
+         !=problem_code
+         |)
+         |  
+      .panel-body
+        .form-group  
+          label Insert Your Code Here:
+          textarea.form-control(name='code' rows='25')
+          br
+          button(type='submit' class='btn btn-info right' id='Submit') Submit
