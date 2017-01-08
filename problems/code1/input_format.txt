@@ -1,0 +1,2 @@
+An integer 'T', denoting the number of test cases.
+Fowllowing 'T' lines contain 2 integers 'a' and 'b'.

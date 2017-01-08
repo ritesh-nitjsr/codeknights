@@ -1,0 +1,1 @@
+Display the sum of each input in a new line.
