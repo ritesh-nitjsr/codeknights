@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Code Knights-Register</title>
+	
+	<link rel="stylesheet" type="text/css" href="css/custom.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
+	<script type="text/javascript" src="js/jquery-1.10.2.js"></script>
+	<script type="text/javascript" src="js/jquery-ui.custom.min.js"></script>
+	<script type="text/javascript" src="js/style.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script src="http://1000hz.github.io/bootstrap-validator/dist/validator.min.js"></script>
+	
+</head>
+<body>
+  <!--<div class="container">
+	<section id="content">
+		<form action="register" method="POST">
+			<h1>Register</h1>
+			<div>
+				<input type="text" id="firstname" name="firstname" required="" placeholder="First Name" />
+			</div>
+			<div>
+				<input type="text" id="lastname" name="lastname" required="" placeholder="Last Name" />
+			</div>
+			<div>
+				<input type="text" placeholder="Username" required="" id="username" name="username" />
+			</div>
+			<div>
+				<input type="password" placeholder="Password" required="" id="password" name="password" />
+			</div>
+
+			
+
+			
+
+			<div>
+				
+				<a href="login">Login</a>
+			</div>
+		</form>
+		
+	</section>
+   </div>-->
+<div class="container">
+	<section id="content">
+    <form data-toggle="validator" role="form" method="POST" action="/register">
+    <h1>Register</h1>
+  <div class="form-group">
+    <label for="inputName" class="control-label">Name</label>
+    <input type="text" class="form-control" id="inputName" required name='name'>
+
+  </div>
+
+  <div class="form-group">
+    <label for="userName" class="control-label">Username</label>
+    <input type="text" class="form-control" id="userName" required name='username'>
+  </div>
+  <div class="form-group">
+    <label for="inputEmail" class="control-label">Email</label>
+    <input type="email" class="form-control" id="inputEmail" data-error="that email address is invalid" required name='email'>
+    <div class="help-block with-errors"></div>
+  </div>
+  <div class="form-group">
+    <label for="inputPassword" class="control-label" name='password'>Password</label>
+    <div class="form-inline row">
+      <div class="form-group col-sm-6">
+        <input type="password" data-minlength="8" class="form-control" id="inputPassword" placeholder="Password" required name="password">
+        <div class="help-block">Minimum of 8 characters</div>
+      </div>
+      <div class="form-group col-sm-6">
+        <input type="password" class="form-control" id="inputPasswordConfirm" data-match="#inputPassword" data-match-error="Whoops, these don't match" placeholder="Confirm" required>
+        <div class="help-block with-errors"></div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="form-group">
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </div>
+  <a href="/Login"> Login Instead </a>
+  <br>
+</form>
+
+		
+	</section>
+   </div>
+   
+
+</body>
+</html>
