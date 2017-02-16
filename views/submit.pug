@@ -9,6 +9,11 @@ html
    script(src='/js/bootstrap.min.js')
    script(src='/js/angular.min.js')
    script(src='/js/custom.js')
+   link(rel='stylesheet', href='/css/codemirror.css')
+   script(src='/js/codemirror.js')
+   script(src='/js/clike/clike.js')
+   script(src='/js/edit/matchbrackets.js')
+
  body
  nav.navbar.navbar-inverse
   .container-fluid
@@ -48,6 +53,12 @@ html
       .panel-body
         .form-group  
           label Insert Your Code Here:
-          textarea.form-control(name='code' rows='25')
+          textarea.form-control(name='code' id='code' rows='25')
           br
           button(type='submit' class='btn btn-info right' id='Submit') Submit
+script.
+  var editor = CodeMirror.fromTextArea(document.getElementById("code"), {
+  lineNumbers: true,
+  mode: "text/x-c++src",
+  matchBrackets: true
+  });
